@@ -1,19 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" style="background-image : url('imgs/bg.jpg')">
+    <HelloWorld msg="" />
+    <csbutton/>
+    
+    <h1>{{csbutton}}</h1>
+    <div class="row"> 
+      <div class="col-6"><button label="Restart" /></div>
+      <div class="col-6"><button label="Attack" /></div>
+      <div class="col-6"><button label="Special Attack" /></div>
+    </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import csbutton from './components/csbutton.vue'
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    csbutton,
+  },
+  data: function () {
+    return {
+    }
+  },
+};
 </script>
 
 <style>
@@ -22,7 +34,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 </style>
