@@ -1,29 +1,18 @@
 <template>
-  <div id="app" style="background-image : url('imgs/bg.jpg')">
-    <HelloWorld msg="" />
-    <csbutton/>
-    
-    <h1>{{csbutton}}</h1>
-    <div class="row"> 
-      <div class="col-6"><button label="Restart" /></div>
-      <div class="col-6"><button label="Attack" /></div>
-      <div class="col-6"><button label="Special Attack" /></div>
-    </div>
+<body>
+  <div id="app">
+    <csbutton msg />
   </div>
+</body>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import csbutton from './components/csbutton.vue'
+import csbutton from "./components/csbutton.vue";
+
 export default {
   name: "App",
   components: {
-    HelloWorld,
     csbutton,
-  },
-  data: function () {
-    return {
-    }
   },
 };
 </script>
@@ -34,6 +23,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 100px;
+  padding: 3em;
+}
+body {
+  background-image: url("./assets/img/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
